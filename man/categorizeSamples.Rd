@@ -16,15 +16,17 @@ categorizeSamples(scores, lowThreshold = 0.25, highThreshold = 0.75)
 \value{
 Array with categorized values in three groups. This array have three different values
          "-1" samples are categorized at "low" threshold
-         "0" samples are categorized at "middle" threshold
+         "0" samples are categorized at "middle" threshold (when available)
          "1" samples are categorized at "high" threshold
 }
 \description{
 Categorize samples on groups
 }
 \examples{
-categorizeSamples(c(1,2,3,4))
-categorizeSamples(c(1,2,3,4), 0.25, 0.75) 
+categorizeSamples(c(1,2,3,4)) 
+categorizeSamples(c(1,2,3,4), 0.25, 0.75)  
+categorizeSamples(c(1,2,3,4), 0.5, 0.5)  
+
 
 }
 \author{
