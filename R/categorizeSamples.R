@@ -10,12 +10,14 @@
 #'
 #' @return Array with categorized values in three groups. This array have three different values
 #'          "-1" samples are categorized at "low" threshold
-#'          "0" samples are categorized at "middle" threshold
+#'          "0" samples are categorized at "middle" threshold (when available)
 #'          "1" samples are categorized at "high" threshold
 #'
 #' @examples
-#' categorizeSamples(c(1,2,3,4))
-#' categorizeSamples(c(1,2,3,4), 0.25, 0.75) 
+#' categorizeSamples(c(1,2,3,4)) 
+#' categorizeSamples(c(1,2,3,4), 0.25, 0.75)  
+#' categorizeSamples(c(1,2,3,4), 0.5, 0.5)  
+#' 
 #'
 #' @export
 
@@ -25,8 +27,15 @@ categorizeSamples <- function(scores,
   if(lowThreshold > highThreshold){
     stop(sprintf("Low threshold (%s) must be lower than high threshold (%s)", lowThreshold, highThreshold))
   }
-  return(
-    as.numeric(quantcut(scores, c(0, lowThreshold, highThreshold, 1))) - 2
-  )
-  
+  if(lowThreshold == highThreshold){
+    quantiles =  c(0, lowThreshold, 1)
+    newLevels = c('-1', '1')
+  } else {
+    quantiles = c(0, lowThreshold, highThreshold, 1)
+    newLevels = c('-1', '0', '1')    
+  }
+  catSamples = quantcut(scores, quantiles, )
+  levels(catSamples)   = newLevels
+  catSamples = as.numeric(as.character(catSamples))
+  return(catSamples)
 }

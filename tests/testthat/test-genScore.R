@@ -8,7 +8,7 @@ test_that("Should generate basic aggregated distance", {
   
   out = genScore(varA, varB)
   
-  expect_equal(out, c(1.41,-1.41), tolerance = 1e-2)
+  expect_equal(out, c(-1.41,1.41), tolerance = 1e-2)
 })
 
 test_that("should return midpoint value as 0 When looking 3 measures with one point 'in the middle'",{
@@ -27,7 +27,7 @@ test_that("should return perfect correlation between this metric and PI metric w
   varB = c(0, 1,2,3)
   
   out = genScore(varA, varB)
-  pi = varB - varA
+  pi = varA - varB
 
   outCor = cor.test(out, pi)  
   expect_equal(outCor$estimate[['cor']], 1)
@@ -40,7 +40,7 @@ test_that("should return perfect correlation between this metric and PI metric w
   varB = runif(100)
   
   out = genScore(varA, varB)
-  pi = varB - varA
+  pi = varA - varB
   outCor = cor.test(out, pi)  
   baseCor = cor.test(varA, varB)
   
@@ -84,10 +84,6 @@ test_that("Should retreive greater varlues to values more far to (0,x) line", {
   thisDf$score  = genScore(varX = thisDf$varX, varY = thisDf$varY)
   maxVal = which.max(thisDf$score)
   expect_equal(thisDf[maxVal, 'point'], 'p10')
-  
     
-}
-
-
-
+})
 

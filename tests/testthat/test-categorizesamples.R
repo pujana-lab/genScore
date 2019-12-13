@@ -44,4 +44,20 @@ test_that("Should stop when low threshold value is greater than high one",{
 })
 
 
+test_that("Should return two groups when thresholds are equal (even numbers)",{
+  input = seq(1, 8)
 
+  out = categorizeSamples(input, 0.5, 0.5)
+  
+  expect_equal(out, c(-1, -1, -1, -1, 1, 1, 1, 1))  
+    
+})
+
+test_that("Should return two groups when thresholds are equal (uneven numbers). More samples at low group",{
+  input = seq(1, 9)
+  
+  out = categorizeSamples(input, 0.5, 0.5)
+  
+  expect_equal(out, c(-1, -1, -1, -1, -1, 1, 1, 1, 1))  
+  
+})
