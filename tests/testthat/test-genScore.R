@@ -60,3 +60,34 @@ test_that("Should return array of zeroes when values are perfetly correlated",{
 
 })
 
+
+
+test_that("Should use labeled variables",{
+  
+  varA = seq(1,10)
+  varB = seq(10,1) 
+  
+  expect_error(genScore(varX = varA, varY = varB), NA)
+
+})
+
+
+test_that("Should retreive greater varlues to values more far to (0,x) line", {
+
+  thisDf = data.frame(
+    point = sprintf('p%d', seq(1,10)),
+    varX =  seq(1,10),
+    varY = seq(10,1),
+    stringsAsFactors = FALSE
+  )
+
+  thisDf$score  = genScore(varX = thisDf$varX, varY = thisDf$varY)
+  maxVal = which.max(thisDf$score)
+  expect_equal(thisDf[maxVal, 'point'], 'p10')
+  
+    
+}
+
+
+
+

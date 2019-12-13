@@ -4,15 +4,16 @@
 \alias{genScore}
 \title{Genetic Score metric}
 \usage{
-genScore(varA, varB)
+genScore(varX, varY)
 }
 \arguments{
-\item{varA}{array of "X" dimension values.}
+\item{varX}{array of "X" dimension values.}
 
-\item{varB}{array of "Y" dimension values}
+\item{varY}{array of "Y" dimension values}
 }
 \value{
-Array with the antisense distance metric
+Array with the antisense distance metric, as more greater is this value
+        the point is more far than (0,x) line, that is, more on the right corner of the plot.
 }
 \description{
 Genetic Score metric
