@@ -1,6 +1,6 @@
 #' Genetic Score metric
 #' 
-#' @author Karl W Broman, \email{broman@@wisc.edu}
+#' @author Luis Palomero, \email{lpalomerol@gmail.com}
 #'
 #' This metric "collapses" two-dimensional values into a one dimensional. 
 #' This distance is related to the inverse diagonal from a 2D space metric varA/varB

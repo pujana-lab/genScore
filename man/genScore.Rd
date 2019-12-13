@@ -15,10 +15,15 @@ genScore(varA, varB)
 Array with the antisense distance metric
 }
 \description{
-This metric "collapses" two-dimensional values into a one dimensional. 
-This distance is related to the inverse diagonal from a 2D space metric varA/varB
+Genetic Score metric
 }
 \examples{
 genScore(c(1,2,3,4), c(4,3,2,1))
 
+}
+\author{
+Luis Palomero, \email{lpalomerol@gmail.com}
+
+This metric "collapses" two-dimensional values into a one dimensional. 
+This distance is related to the inverse diagonal from a 2D space metric varA/varB
 }
