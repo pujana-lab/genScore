@@ -2,9 +2,13 @@ Package: genScore
 Version: 0.0.1
 Date: 2019-12-13
 Title: Genetic Score metric
-Description: Genetic Score metric calculator.
+Description: Genetic Score metric calculator.de
 Author: Luis Palomero <lpalomerol@gmail.com>
 Maintainer: Karl W Broman <lpalomerol@gmail.com>
 RoxygenNote: 6.1.1
 Encoding: UTF-8
 License: GPL-3
+Imports:
+    gtools
+Suggests: 
+    testthat
