@@ -8,7 +8,8 @@ Authors@R: as.person(c(
     "Ines Guix <lpalomerol@gmail.com> [aut]",  
     "Jade Moore <Jade.Moore@ucsf.edu> [aut]",  
     "Luis Palomero <lpalomerol@gmail.com> [aut, cre]",
-    "Miquel Àngel Pujana <mapujana@iconcologia.net> [ctb]"
+    "Miquel Àngel Pujana <mapujana@iconcologia.net> [ctb]",
+    "INSTITUT D'INVESTIGACIÓ BIOMÉDICA DE BELLVITGE (IDIBELL) [cph]"
   ))
 Maintainer: Luis Palomero <lpalomerol@gmail.com>
 RoxygenNote: 6.1.1
