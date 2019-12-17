@@ -9,9 +9,9 @@ categorizeSamples(scores, lowThreshold = 0.25, highThreshold = 0.75)
 \arguments{
 \item{scores}{array of collapsed scores.}
 
-\item{lowThrehsold}{Threshold within samples are considered in "low" group.}
+\item{lowThreshold}{Threshold within samples are considered in "low" group.}
 
-\item{highThrehsold}{Threshold within samples are considered in "high" group.}
+\item{highThreshold}{Threshold within samples are considered in "high" group.}
 }
 \value{
 Array with categorized values in three groups. This array have three different values

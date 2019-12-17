@@ -5,8 +5,8 @@
 #' This method categorizes samples in left-right groups
 #'
 #' @param scores array of collapsed scores.
-#' @param lowThrehsold Threshold within samples are considered in "low" group.
-#' @param highThrehsold Threshold within samples are considered in "high" group.
+#' @param lowThreshold Threshold within samples are considered in "low" group.
+#' @param highThreshold Threshold within samples are considered in "high" group.
 #'
 #' @return Array with categorized values in three groups. This array have three different values
 #'          "-1" samples are categorized at "low" threshold
