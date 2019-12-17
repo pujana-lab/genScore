@@ -1,10 +1,16 @@
 Package: genScore
-Version: 0.0.1
-Date: 2019-12-13
+Version: 0.0.2
+Date: 2019-12-17
 Title: Genetic Score metric
-Description: Genetic Score metric calculator.de
-Author: Luis Palomero <lpalomerol@gmail.com>
-Maintainer: Karl W Broman <lpalomerol@gmail.com>
+Description: Genetic Score metric calculator.
+Authors@R: as.person(c(
+    "Mary Helen Barcellos-Hoff <MaryHelenBarcellos-Hoff@ucsf.edu> [ctb]",
+    "Ines Guix <lpalomerol@gmail.com> [aut]",  
+    "Jade Moore <Jade.Moore@ucsf.edu> [aut]",  
+    "Luis Palomero <lpalomerol@gmail.com> [aut, cre]",
+    "Miquel Àngel Pujana <mapujana@iconcologia.net> [ctb]"
+  ))
+Maintainer: Luis Palomero <lpalomerol@gmail.com>
 RoxygenNote: 6.1.1
 Encoding: UTF-8
 License: GPL-3
@@ -12,3 +18,4 @@ Imports:
     gtools
 Suggests: 
     testthat
+
