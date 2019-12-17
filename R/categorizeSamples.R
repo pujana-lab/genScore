@@ -34,7 +34,7 @@ categorizeSamples <- function(scores,
     quantiles = c(0, lowThreshold, highThreshold, 1)
     newLevels = c('-1', '0', '1')    
   }
-  catSamples = quantcut(scores, quantiles, )
+  catSamples = gtools::quantcut(scores, quantiles, )
   levels(catSamples)   = newLevels
   catSamples = as.numeric(as.character(catSamples))
   return(catSamples)
